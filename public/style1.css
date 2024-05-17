@@ -1,0 +1,199 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #e9e5e5, #963944);
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background-color:#bec1d4;
+    color: black;
+    padding: 5px;
+    text-align: left;
+}
+
+nav {
+    background-color:white;
+    color:black;
+    padding: 20px;
+    margin: 13px 20px;
+    text-align: left;
+    border-radius: 36px;
+    border: 3px solid black;
+}
+nav #search_btn{
+    
+}
+nav a {
+    color:black;
+    background-color: white;
+    text-decoration: none;
+    font-size: medium;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: white;
+    background-color: rgb(77, 75, 75);
+    margin: 15px;
+    padding: 15px;
+    border-radius: 30px;
+    transform: scale(1);
+    transition-timing-function: ease-in-out;
+    transition: all ease-in-out 0.5s;
+
+}
+
+section {
+    padding: 20px;
+}
+
+
+.Company-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.Company-card {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 3px solid rgb(30, 30, 30);
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.8);
+    background: linear-gradient(to right, #edeef1, #f5f3fb);
+    transition: transform 0.2s ease-in-out;
+}
+
+.Company-card:hover {
+    transform: scale(1.05);
+}
+
+.Company-card img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    object-fit:cover;
+}
+
+.Company-card .text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+    color: #fff;
+    border-radius: 10px;
+}
+
+.Company-card h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.Company-card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.Company-card .details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Company-card button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+/* Your existing styles here */
+
+/* Reset some default styles */
+
+
+#contactUs {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}
+
+#contactUs h2 {
+    margin-bottom: 10px;
+}
+
+#contactUs p {
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 300px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #e4e5ed;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.card:hover{
+    width: 300px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transform: scale(1.1);
+    transition-delay: 3ms;
+    transition-timing-function: ease-out;
+    cursor: pointer;
+}
+
+.card i {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #e0e3e5;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #0e0c0c;
+}
+.hidden{
+    display: none;
+}

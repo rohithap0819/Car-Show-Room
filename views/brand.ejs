@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Honda Cars</title>
+<link rel="stylesheet" href="style1.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .car-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .car-card {
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 300px;
+    }
+
+    .car-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .car-info h2 {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .car-info p {
+        margin: 5px 0;
+    }
+</style>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/login">Login/SignUp</a>
+        <a href="contact.html">contact_us</a>
+        <a href="aboutus.html">About Us</a>
+        <!-- Add more navigation links as needed -->
+    </nav>
+<div class="car-gallery">
+    <% for(let i=0;i<models.length;i++) {%>
+    <div class="car-card">
+        <form action="/wishlist" method="post">
+            <input type="text" name="name" value="<%= models[i].model_name %>" class="hidden">
+        <img src="/Images/<%= models[i].model_name %>.jpeg" alt="Honda Accord">
+        <div class="car-info">
+            <h2><%=models[i].model_name %></h2>
+            <p>Specs: <%=models[i].specification %></p>
+            <p>Price: $<%=models[i].price%></p>
+            <button type="submit">Add to wishlist</button>
+        </div>
+    </div>
+</form>
+    <% } %>
+</div>
+    <section id="contactUs">
+        <h2>Contact Us</h2>
+        <p>Choose a convenient way to get in touch with us.</p>
+
+        <div class="card-container">
+            <!-- Card 1: Email -->
+            <div class="card">
+                <i class="far fa-envelope"></i>
+                <h3>Email Us</h3>
+                <p>Email: autohub@gmail.com</p>
+            </div>
+
+            <!-- Card 2: Phone -->
+            <div class="card">
+                <i class="fas fa-phone"></i>
+                <a href="#"><i class="fa-solid fa-phone"></i></a>
+                <h3>Call Us</h3>
+                <p>Phone: +91 8889998887</p>
+            </div>
+
+            <!-- Card 3: Location -->
+            <div class="card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Visit Us</h3>
+                <p>Address: Chinmaya Mission Hospital Rd, Binnamangala, Stage 1, Indiranagar, Bengaluru, Karnataka 560038, India</p>
+            </div>
+        </div>
+    </section>
+
+
+
+</body>
+</html>

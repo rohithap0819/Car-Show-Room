@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTOHUB</title>
+    <link rel="stylesheet" href="style1.css">
+
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="\login">Login/SignUp</a>
+        <a href="contact.html">contact_us</a>
+        <a href="aboutus.html">About Us</a>
+        <!-- Add more navigation links as needed -->
+    </nav>
+
+
+    <section class="Company-list">
+        <!--Company 1-->
+    
+        <% for(let i = 0; i < brands.length; i++) { %>
+            <form action="/cars" method="post">
+                <input type="hidden" value="<%= brands[i].cars_brand %>" name="name">
+                <button type="submit">
+                    <div class="Company-card">
+                        <img src="/Images/<%= brands[i].cars_brand %>.png">
+                    </div>
+                </button>
+            </form>
+        <% } %>
+        
+    </section>
+    <section id="contactUs">
+        <h2>Contact Us</h2>
+        <p>Choose a convenient way to get in touch with us.</p>
+
+        <div class="card-container">
+            <!-- Card 1: Email -->
+            <div class="card">
+                <i class="far fa-envelope"></i>
+                <h3>Email Us</h3>
+                <p>Email: autohub@gmail.com</p>
+            </div>
+
+            <!-- Card 2: Phone -->
+            <div class="card">
+                <i class="fas fa-phone"></i>
+                <a href="#"><i class="fa-solid fa-phone"></i></a>
+                <h3>Call Us</h3>
+                <p>Phone: +91 8889998887</p>
+            </div>
+
+            <!-- Card 3: Location -->
+            <div class="card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Visit Us</h3>
+                <p>Address: Chinmaya Mission Hospital Rd, Binnamangala, Stage 1, Indiranagar, Bengaluru, Karnataka 560038, India</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
